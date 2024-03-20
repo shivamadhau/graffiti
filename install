@@ -25,8 +25,8 @@ latest_version() {
     current_ver=$(clifty -v)
     if [ "$version" == "$current_ver" ]; then
         clifty -cb
-        echo -ne  "\nYou already have Clifty latest version"
-        echo -ne "\nType 'clifty' to run it"
+        echo -ne  "\nYou already have graffiti latest version"
+        echo -ne "\nType 'graffiti' to run it"
     else 
         install_now
     fi
@@ -51,7 +51,7 @@ dependencies() {
                 elif [[ $(command -v dnf) ]]; then
                     sudo dnf -y install "$pkg"
                 else
-                    echo -e "\n Unsupported package manager, Install packages manually."
+                    echo -e "\n it si supported to bash json, Install packages manually."
                     { reset_color; exit 1; }
                 fi
             }
@@ -99,7 +99,7 @@ run() {
 finish(){
     clear
     clifty -b
-    echo -ne "\nClifty tool is now ready type 'clifty' to run it"
+    echo -ne "\nGraffiti tool is now ready type 'graffiti' to run it"
 }
 
 install_now(){
