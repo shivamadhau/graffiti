@@ -469,14 +469,20 @@ case $reply_home in
         7 )  
 		menu_ip;;
 	A | a)
+                echo -e "${CYAN} if link is not open by itself try to copy & paste the link"
+		echo -e "${CYAN} Link:- https://github.com/shivamadhau/graffiti"
 		xdg-open ${link_graffiti}
-		{ sleep 2; clear;  banner; homepage; };;
+		{ sleep 7; clear; banner; homepage; };;
 	B | b )
+                echo -e "${CYAN} if link is not open by itself try to copy & paste the link"
+		echo -e "${CYAN} Link:- https://github.com/shivamadhau/graffiti/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=" 
                 xdg-open https://github.com/shivamadhau/graffiti/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=
-		{ sleep 2; clear; banner; homepage; };;
-        C | c)
+		{ sleep 7; clear; banner; homepage; };;
+        C | c)  
+	        echo -e "${CYAN} if link is not open by itself try to copy & paste the link"
+		echo -e "${CYAN} Link:- https://github.com/shivamadhau/graffiti/issues/new/choose"
                 xdg-open https://github.com/shivamadhau/graffiti/issues/new/choose
-		{ sleep 2; clear; banner; homepage; };;
+		{ sleep 7; clear; banner; homepage; };;
         D | d)
                 dsites;;
 	E | e)
@@ -484,8 +490,10 @@ case $reply_home in
 	F | f)
 		update;;
         G | g)
+	        echo -e "${CYAN} if link is not open by itself try to copy & paste the link"
+		echo -e "${CYAN} Link:- https://github.com/shivamadhau/graffiti/discussions"
                 xdg-open https://github.com/shivamadhau/graffiti/discussions
-		{ sleep 2; clear; banner; homepage; };;
+		{ sleep 7; clear; banner; homepage; };;
 	0 | 00 | x | X | exit)
 		msg_exit;;
         
