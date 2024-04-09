@@ -1,8 +1,8 @@
 #!/bin/bash
 
 package_name="graffiti"
-link_clifty="https://github.com/Alygnt/Clifty"
-link_clifty_raw="https://raw.githubusercontent.com/Alygnt/Clifty/main"
+link_clifty="https://github.com/shivamadhau/graffiti"
+link_graffiti_raw="https://raw.githubusercontent.com/shivamadhau/graffiti/main"
 
 clear
 cd $HOME
@@ -67,7 +67,7 @@ variables() {
 
 # Function to install Clifty
 install_deb() {
-    wget --no-check-certificate ${link_clifty}/releases/download/v_${version}/clifty_${version}.deb > /dev/null 2>&1
+    wget --no-check-certificate https://github.com/Alygnt/Clifty/releases/tag/v_1.5/clifty_1.5.deb > /dev/null 2>&1
     if [[ $(command -v termux-chroot) ]]; then
         termux-chroot dpkg -i clifty_${version}.deb
     else
@@ -114,4 +114,3 @@ else
     install_now
     finish
 fi
-
